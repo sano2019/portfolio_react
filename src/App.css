@@ -1,10 +1,146 @@
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  color: #61dafb;
+}
+
 .App {
   text-align: center;
+  background-color: #282c34;
+  background-image: url('https://www.transparenttextures.com/patterns/black-linen.png');
+  min-height: 100vh;
+  color: #fff;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 100px);
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 50px;
   pointer-events: none;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.navlinks {
+  text-align: center;
+  width: calc(100% - 0px);
+  height: calc(100% - 0px);
+  white-space: nowrap;
+  display: inline-block;
+  overflow: visible;
+  position: relative;
+  font-size: 14px;
+}
+
+.navlinks ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.navlinks li a {
+  color: #fff;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navlinks ul :hover {
+  color: #61dafb;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex;
+}
+
+.projects {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 3%;
+  padding: 10px;
+  width: 280px;
+  margin: 16px;
+}
+
+.project-card ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+.technologies {
+  font-size: 24px;
+  margin: -5px 5px 15px 5px;
+}
+
+.card-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: auto;
+}
+
+.card-button {
+  background-color: rgba(97, 218, 251, 0.05); /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.footer {
+  width: 100%;
+  bottom: 0;
+  height: 150px;
+  text-align: center;
+  font-size: 12px;
+  color: white;
+  padding-top: 25px;
+  padding-bottom: 30px;
+  margin-top: 50px;
+}
+
+.socials {
+  font-size: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 30px 15px 10px 15px;
+}
+
+.socials a {
+  text-decoration: none;
+  color: white;
+}
+
+.socials a :hover {
+  color: #61dafb;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -14,14 +150,13 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  margin: auto;
 }
 
 .App-link {
@@ -34,5 +169,17 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 1020px) {
+  .project-list {
+    width: 1020px;
+    justify-content: center;
+    margin: auto;
+  }
+  .projects {
+    width: 1020px;
+    justify-content: center;
   }
 }
