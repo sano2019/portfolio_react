@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import {
   DiReact,
@@ -17,52 +17,85 @@ import {
 const getIcon = (tech) => {
   switch (tech) {
     case 'html':
-      return <DiHtml5 className='icon' alt='HTML5' title='HTML5' />;
+      return (
+        <>
+          <DiHtml5 className='icon' />
+          <span className='tooltip-text'>HTML5</span>
+        </>
+      );
     case 'css':
-      return <DiCss3 className='icon' />;
+      return (
+        <>
+          <DiCss3 className='icon' />
+        </>
+      );
     case 'ruby':
-      return <DiRuby className='icon' />;
+      return (
+        <>
+          <DiRuby className='icon' />
+          <span className='tooltip-text'>Ruby</span>
+        </>
+      );
     case 'rails':
-      return <DiRor className='icon' />;
+      return (
+        <>
+          <DiRor className='icon' />
+          <span className='tooltip-text'>Rails</span>
+        </>
+      );
     case 'react':
-      return <DiReact className='icon' />;
+      return (
+        <>
+          <DiReact className='icon' />
+          <span className='tooltip-text'>React</span>
+        </>
+      );
     case 'postgres':
-      return <DiPostgresql className='icon' />;
+      return (
+        <>
+          <DiPostgresql className='icon' />
+          <span className='tooltip-text'>PostgreSQL</span>
+        </>
+      );
     case 'mongo':
-      return <DiMongodb className='icon' />;
+      return (
+        <>
+          <DiMongodb className='icon' />
+          <span className='tooltip-text'>MongoDB</span>
+        </>
+      );
     case 'github':
-      return <DiGithubBadge className='icon' />;
+      return (
+        <>
+          <DiGithubBadge className='icon' />
+          <span className='tooltip-text'>Github</span>
+        </>
+      );
     case 'node':
-      return <DiNodejsSmall className='icon' />;
+      return (
+        <>
+          <DiNodejsSmall className='icon' />
+          <span className='tooltip-text'>Node.JS</span>
+        </>
+      );
     case 'heroku':
-      return <DiHeroku className='icon' />;
+      return (
+        <>
+          <DiHeroku className='icon' />
+          <span className='tooltip-text'>Heroku</span>
+        </>
+      );
     case 'javascript':
-      return <DiJavascript className='icon' />;
+      return (
+        <>
+          <DiJavascript className='icon' />
+          <span className='tooltip-text'>Javascript</span>
+        </>
+      );
     default:
       return null;
   }
 };
-
-/* <head>
-<style>
-div {
-  background-color: yellow;
-  padding: 20px;
-  display: none;
-}
-  
-span:hover + div {
-  display: block;
-}
-</style>
-</head>
-<body>
-
-<span>Hover over me!</span>
-<div>I will show on hover</div>
-
-</body>
-</html> */
 
 const ProjectCard = (props) => {
   return (
