@@ -52,7 +52,7 @@ const ProjectList = [
     id: 1,
     title: 'Rent-A-Pet',
     description:
-      'The intended audience was people who love pets and needed someone to take care of their pet while they are on vacation.',
+      'The intended audience was people who love pets and needed someone to take care of their pet while they are on vacation. One week project made in a team of 4 people.',
     technologies: [
       'ruby',
       'rails',
