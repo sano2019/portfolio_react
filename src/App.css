@@ -14,14 +14,14 @@ a:hover {
 .App {
   text-align: center;
   background-color: #282c34;
-  background-image: url('https://www.transparenttextures.com/patterns/black-linen.png');
+  background-image: url('./components//images//backgrounds/black-linen.png');
   min-height: 100vh;
   color: #fff;
 }
 .container {
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 100px);
+  min-height: calc(100vh - 300px);
 }
 
 .App-logo {
@@ -42,7 +42,7 @@ a:hover {
   display: inline-block;
   overflow: visible;
   position: relative;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .navlinks ul {
@@ -100,23 +100,22 @@ a:hover {
   font-size: 24px;
   margin: -5px 5px 15px 5px;
   position: relative;
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-.technologies .tooltip-text {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
-  position: absolute;
-  z-index: 1;
+/* .technologies:hover {
+  color: #61dafb;
+} */
+
+.tooltip {
+  display: flex;
+  flex-direction: row;
 }
 
-.technologies:hover .tooltip-text {
-  visibility: visible;
+.tech-popup {
+  height: 35px;
 }
 
 .card-button-container {
@@ -178,11 +177,14 @@ a:hover {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  margin: auto;
+  margin-top: 20%;
 }
 
 .App-link {
   color: #61dafb;
+}
+main {
+  margin-top: 1.5%;
 }
 
 @keyframes App-logo-spin {

@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import { Tooltip, Zoom } from '@material-ui/core';
+import { withStyles } from '@material-ui/core/styles';
 import {
   DiReact,
   DiHtml5,
@@ -13,83 +15,194 @@ import {
   DiHeroku,
   DiJavascript,
 } from 'react-icons/di';
+import { MdWbCloudy } from 'react-icons/md';
+import { BsXDiamond } from 'react-icons/bs';
+
+const LightTooltip = withStyles((theme) => ({
+  tooltip: {
+    backgroundColor: 'rgba(97, 218, 251, 0.05)',
+    color: '#fff',
+    boxShadow: theme.shadows[1],
+    fontSize: 14,
+  },
+}))(Tooltip);
+
+//missing icons: Cloudinary, Netlify, express
 
 const getIcon = (tech) => {
   switch (tech) {
     case 'html':
       return (
         <>
-          <DiHtml5 className='icon' />
-          <span className='tooltip-text'>HTML5</span>
+          <LightTooltip
+            placement='top'
+            TransitionComponent={Zoom}
+            title='HTML5'
+          >
+            <div>
+              <DiHtml5 />
+            </div>
+          </LightTooltip>
+        </>
+      );
+    case 'netlify':
+      return (
+        <>
+          <LightTooltip
+            placement='top'
+            TransitionComponent={Zoom}
+            title='Netlify'
+          >
+            <div>
+              <BsXDiamond />
+            </div>
+          </LightTooltip>
+        </>
+      );
+    case 'cloudinary':
+      return (
+        <>
+          <LightTooltip
+            placement='top'
+            TransitionComponent={Zoom}
+            title='Cloudinary'
+          >
+            <div>
+              <MdWbCloudy />
+            </div>
+          </LightTooltip>
         </>
       );
     case 'css':
       return (
         <>
-          <DiCss3 className='icon' />
+          <LightTooltip placement='top' TransitionComponent={Zoom} title='CSS3'>
+            <div>
+              <DiCss3 />
+            </div>
+          </LightTooltip>
         </>
       );
     case 'ruby':
       return (
         <>
-          <DiRuby className='icon' />
-          <span className='tooltip-text'>Ruby</span>
+          <LightTooltip placement='top' TransitionComponent={Zoom} title='Ruby'>
+            <div>
+              <DiRuby />
+            </div>
+          </LightTooltip>
         </>
       );
     case 'rails':
       return (
         <>
-          <DiRor className='icon' />
-          <span className='tooltip-text'>Rails</span>
+          <LightTooltip
+            placement='top'
+            TransitionComponent={Zoom}
+            title='Rails'
+          >
+            <div>
+              <DiRor />
+            </div>
+          </LightTooltip>
         </>
       );
     case 'react':
       return (
         <>
-          <DiReact className='icon' />
-          <span className='tooltip-text'>React</span>
+          <LightTooltip
+            placement='top'
+            TransitionComponent={Zoom}
+            title='React'
+          >
+            <div>
+              <DiReact />
+            </div>
+          </LightTooltip>
         </>
       );
     case 'postgres':
       return (
         <>
-          <DiPostgresql className='icon' />
-          <span className='tooltip-text'>PostgreSQL</span>
+          <LightTooltip
+            placement='top'
+            TransitionComponent={Zoom}
+            title='PostgreSQL'
+          >
+            <div>
+              <DiPostgresql />
+            </div>
+          </LightTooltip>
         </>
       );
     case 'mongo':
       return (
         <>
-          <DiMongodb className='icon' />
-          <span className='tooltip-text'>MongoDB</span>
+          <LightTooltip
+            placement='top'
+            TransitionComponent={Zoom}
+            title='MongoDB'
+          >
+            <div>
+              <DiMongodb />
+            </div>
+          </LightTooltip>
         </>
       );
     case 'github':
       return (
         <>
-          <DiGithubBadge className='icon' />
-          <span className='tooltip-text'>Github</span>
+          <LightTooltip
+            placement='top'
+            TransitionComponent={Zoom}
+            title='Github'
+          >
+            <div>
+              <DiGithubBadge />
+            </div>
+          </LightTooltip>
         </>
       );
     case 'node':
       return (
         <>
-          <DiNodejsSmall className='icon' />
-          <span className='tooltip-text'>Node.JS</span>
+          <LightTooltip
+            placement='top'
+            TransitionComponent={Zoom}
+            title='Node.JS & Express.JS'
+          >
+            <div>
+              <DiNodejsSmall />
+            </div>
+          </LightTooltip>
         </>
       );
     case 'heroku':
       return (
         <>
-          <DiHeroku className='icon' />
-          <span className='tooltip-text'>Heroku</span>
+          <LightTooltip
+            placement='top'
+            TransitionComponent={Zoom}
+            title='Heroku'
+          >
+            <div>
+              <DiHeroku />
+            </div>
+          </LightTooltip>
         </>
       );
     case 'javascript':
       return (
         <>
-          <DiJavascript className='icon' />
-          <span className='tooltip-text'>Javascript</span>
+          <LightTooltip
+            placement='top'
+            TransitionComponent={Zoom}
+            title='Javascript'
+          >
+            <div>
+              <DiJavascript />
+            </div>
+          </LightTooltip>
         </>
       );
     default:
@@ -104,9 +217,9 @@ const ProjectCard = (props) => {
       <p>{props.description}</p>
       <p>Technologies used:</p>
       <div className='tech-popup'></div>
-      <p className='technologies'>
+      <div className='technologies'>
         {props.technologies.sort().map((t) => getIcon(t))}
-      </p>
+      </div>
       <div className='card-button-container'>
         <a
           href={props.url}

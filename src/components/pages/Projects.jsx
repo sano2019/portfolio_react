@@ -12,6 +12,7 @@ const Projects = (props) => {
         <div className='projects'>
           {ProjectList.map((project) => (
             <ProjectCard
+              key={project.id}
               title={project.title}
               description={project.description}
               technologies={project.technologies}

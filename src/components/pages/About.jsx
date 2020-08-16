@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from '../../logo.svg';
 
 const About = () => {
   return (
@@ -10,7 +9,7 @@ const About = () => {
       <main>
         <code>
           Hi, my name is Sander. I was born and raised in the Netherlands and
-          have been living in Sweden since the end of 2017.
+          have been living in Stockholm, Sweden since the end of 2017.
         </code>
       </main>
     </>

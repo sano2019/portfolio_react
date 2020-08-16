@@ -4,6 +4,7 @@ import {
   FaLinkedin,
   FaTwitterSquare,
   FaGithubSquare,
+  FaRegCopyright,
 } from 'react-icons/fa';
 
 const Footer = () => {
@@ -23,9 +24,7 @@ const Footer = () => {
           <FaGithubSquare className='socials' />
         </a>
       </div>
-      <code>
-        <span className='cr'>©</span> Sander Nobel 2020
-      </code>
+      <FaRegCopyright /> Sander Nobel 2020
     </div>
   );
 };
