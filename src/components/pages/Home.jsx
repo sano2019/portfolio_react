@@ -14,7 +14,7 @@ const Home = () => {
       <main>
         <p>
           I'm Sander, an aspiring full-stack developer, and you just found my
-          portfolio page
+          portfolio page!
         </p>
         <p>
           Please feel free to have a look around and get in touch if you see

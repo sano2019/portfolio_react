@@ -170,13 +170,23 @@ a:hover {
   }
 }
 
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #61dafb;
+  margin-top: 10%;
+}
+
 .App-header {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #61dafb;
   margin-top: 20%;
 }
 
@@ -185,6 +195,16 @@ a:hover {
 }
 main {
   margin-top: 1.5%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+main a {
+  color: #61dafb;
+}
+
+main a:hover {
+  color: #fff;
 }
 
 @keyframes App-logo-spin {
@@ -205,5 +225,13 @@ main {
   .projects {
     width: 1020px;
     justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    margin-left: 10%;
+    margin-right: 10%;
+    letter-spacing: 1px;
   }
 }

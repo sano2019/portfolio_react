@@ -6,9 +6,7 @@ const Projects = (props) => {
   return (
     <Fragment>
       <div className='project-list'>
-        <div className='project-intro'>
-          <h2>Projects I have worked on</h2>
-        </div>
+        <header>Projects I have worked on</header>
         <div className='projects'>
           {ProjectList.map((project) => (
             <ProjectCard

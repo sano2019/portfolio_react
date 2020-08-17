@@ -27,8 +27,6 @@ const LightTooltip = withStyles((theme) => ({
   },
 }))(Tooltip);
 
-//missing icons: Cloudinary, Netlify, express
-
 const getIcon = (tech) => {
   switch (tech) {
     case 'html':
