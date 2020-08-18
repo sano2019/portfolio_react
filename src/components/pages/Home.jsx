@@ -5,16 +5,14 @@ const Home = () => {
   return (
     <>
       <header className='App-header'>
-        <p style={{ justifyContent: 'center' }}>
-          <code>Welcome</code>
-          <div className='homebox'></div>
-        </p>
+        <h1>Welcome</h1>
+
         <img src={logo} className='App-logo' alt='logo' />
       </header>
       <main>
         <p>
-          I'm Sander, an aspiring full-stack developer, and you just found my
-          portfolio page!
+          I'm Sander, an aspiring full-stack developer based in Stockholm,
+          Sweden, and you just found my portfolio page!
         </p>
         <p>
           Please feel free to have a look around and get in touch if you see

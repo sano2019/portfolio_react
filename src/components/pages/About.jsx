@@ -4,7 +4,7 @@ const About = () => {
   return (
     <>
       <header>
-        <h2>Who am I?</h2>
+        <h1>Who am I?</h1>
       </header>
       <main>
         <p>
@@ -20,8 +20,7 @@ const About = () => {
         <p>
           Since then I have worked several jobs, mostly on the edge between
           business and IT. It wasn't until early 2020 that I decided to pivot my
-          career into web development, after my employer closed their office in
-          Stockholm.
+          career into web development.
         </p>
         <p>
           I had coded here and there before, during university and at times in

@@ -11,6 +11,10 @@ a:hover {
   color: #61dafb;
 }
 
+h1 {
+  font-size: 1.5em;
+}
+
 .App {
   text-align: center;
   background-color: #282c34;
@@ -21,7 +25,7 @@ a:hover {
 .container {
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 300px);
+  min-height: calc(100vh - 272px);
 }
 
 .App-logo {
@@ -36,8 +40,8 @@ a:hover {
 
 .navlinks {
   text-align: center;
-  width: calc(100% - 0px);
-  height: calc(100% - 0px);
+  width: 100%;
+  height: 100%;
   white-space: nowrap;
   display: inline-block;
   overflow: visible;
@@ -143,7 +147,6 @@ a:hover {
   font-size: 12px;
   color: white;
   padding-top: 25px;
-  padding-bottom: 30px;
   margin-top: 50px;
 }
 
@@ -203,6 +206,11 @@ main a {
   color: #61dafb;
 }
 
+main p {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
 main a:hover {
   color: #fff;
 }
@@ -233,5 +241,8 @@ main a:hover {
     margin-left: 10%;
     margin-right: 10%;
     letter-spacing: 1px;
+  }
+  h1 {
+    font-size: 2em;
   }
 }

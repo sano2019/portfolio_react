@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <>
       <header className='App-header'>
-        <p>Get in touch</p>
+        <h1>Get in touch</h1>
       </header>
       <main>
         If you would like to get in touch, feel free to connect with me
