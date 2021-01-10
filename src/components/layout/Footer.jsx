@@ -24,7 +24,7 @@ const Footer = () => {
           <FaGithubSquare className='socials' />
         </a>
       </div>
-      <FaRegCopyright /> Sander Nobel 2020
+      <FaRegCopyright /> Sander Nobel 2021
     </div>
   );
 };
