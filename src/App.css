@@ -15,6 +15,10 @@ h1 {
   font-size: 1.5em;
 }
 
+.header {
+  font-size: 3em;
+}
+
 .App {
   text-align: center;
   background-color: #282c34;
