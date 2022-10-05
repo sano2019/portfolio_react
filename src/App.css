@@ -15,6 +15,11 @@ h1 {
   font-size: 1.5em;
 }
 
+.header {
+  margin-top: 0px;
+  font-size: 3em;
+}
+
 .App {
   text-align: center;
   background-color: #282c34;
@@ -31,11 +36,6 @@ h1 {
 .App-logo {
   height: 50px;
   pointer-events: none;
-}
-.navbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
 }
 
 .navlinks {
@@ -144,17 +144,6 @@ h1 {
   text-align: center;
   text-decoration: none;
   border-radius: 5px;
-}
-
-.footer {
-  width: 100%;
-  bottom: 0;
-  height: 150px;
-  text-align: center;
-  font-size: 12px;
-  color: white;
-  padding-top: 25px;
-  margin-top: 50px;
 }
 
 .socials {

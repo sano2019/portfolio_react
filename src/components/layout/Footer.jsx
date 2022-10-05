@@ -9,7 +9,7 @@ import {
 
 const Footer = () => {
   return (
-    <div className='footer'>
+    <footer>
       <div className='socials'>
         <a href='https://dev.to/sano2019'>
           <FaDev className='socials' />
@@ -25,7 +25,7 @@ const Footer = () => {
         </a>
       </div>
       <FaRegCopyright /> Sander Nobel 2021
-    </div>
+    </footer>
   );
 };
 
