@@ -65,6 +65,11 @@ h1 {
   text-decoration: none;
 }
 
+.navlinks li a:focus-visible{
+  border: 1px solid white;
+  outline: none;
+}
+
 .navlinks ul :hover {
   color: #61dafb;
 }
