@@ -224,6 +224,7 @@ const ProjectCard = (props) => {
           target='_blank'
           rel='noopener noreferrer'
           className='card-button'
+          aria-label={`${props.title} website`}
         >
           Website
         </a>
@@ -233,6 +234,7 @@ const ProjectCard = (props) => {
           target='_blank'
           rel='noopener noreferrer'
           className='card-button'
+          aria-label={`${props.title} github`}
         >
           Github
         </a>
