@@ -9,7 +9,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className=‘footer’>
       <div className='socials'>
         <a href='https://dev.to/sano2019'>
           <FaDev className='socials' />
