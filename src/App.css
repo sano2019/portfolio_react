@@ -13,6 +13,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-align: left; /* Explicitly reset global center-aligns */
 }
 
 .portfolio-container {
@@ -24,14 +25,16 @@ body {
     "Segoe UI",
     Roboto,
     sans-serif;
-  padding: 3rem 1.5rem;
+  padding: 4rem 1.5rem;
   min-height: 100vh;
   max-width: 720px;
   margin: 0 auto;
+  text-align: left; /* Forces left layout for all text modules */
 }
 
 .portfolio-header {
   margin-bottom: 4rem;
+  text-align: left;
 }
 
 .portfolio-badge {
@@ -43,7 +46,7 @@ body {
   font-weight: bold;
   border-radius: 4px;
   letter-spacing: 0.05em;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .portfolio-title {
@@ -70,12 +73,16 @@ body {
   font-size: 1.05rem;
   line-height: 1.6;
   color: #cbd5e1;
+  margin-bottom: 1.5rem;
 }
 
+/* Fixes the text overlap on your contact row */
 .contact-row {
-  display: flex;
-  gap: 1.5rem;
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 1.5rem !important;
   margin-top: 1.5rem;
+  justify-content: flex-start;
 }
 
 .contact-link {
@@ -83,131 +90,169 @@ body {
   text-decoration: none;
   font-weight: 500;
   font-size: 0.95rem;
-  transition: opacity 0.2s;
-}
-
-.contact-link:hover {
-  opacity: 0.8;
+  display: inline-block;
 }
 
 .portfolio-section {
   margin-bottom: 4rem;
+  text-align: left;
 }
 
-.tab-container {
-  display: flex;
-  gap: 1.5rem;
-  margin-bottom: 1.5rem;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.tab-button {
-  background-color: transparent;
-  border: none;
-  color: var(--text-secondary);
-  padding: 0.5rem 0;
-  font-size: 1.1rem;
-  cursor: pointer;
-  font-weight: 500;
-  transition:
-    color 0.2s,
-    border-color 0.2s;
-  border-bottom: 2px solid transparent;
-}
-
-.tab-button.active {
+.section-heading {
+  font-size: 1.5rem;
   color: var(--text-primary);
-  border-bottom: 2px solid var(--accent-cyan);
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+.section-intro-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+/* Fixes card display structure */
+.case-studies-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .pillar-card {
   background-color: var(--card-bg);
   border: 1px solid var(--border-color);
   border-radius: 8px;
-  padding: 1.5rem;
+  padding: 1.75rem;
+  text-align: left;
 }
 
-.card-title {
+.card-meta {
+  display: flex !important;
+  justify-content: space-between !important;
+  flex-direction: row !important;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.card-company {
+  color: var(--accent-cyan);
+}
+
+.card-scope {
+  color: var(--text-muted);
+}
+
+.case-title {
+  font-size: 1.3rem;
   margin: 0 0 0.75rem 0;
   color: var(--text-primary);
-  font-size: 1.25rem;
+  font-weight: 700;
 }
 
 .card-text {
   margin: 0 0 1.5rem 0;
-  line-height: 1.5;
+  line-height: 1.6;
   color: var(--text-secondary);
   font-size: 0.95rem;
 }
 
+/* Fixes the merged layout tags */
 .tag-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  flex-direction: row !important;
+  gap: 0.5rem !important;
+  margin-top: 1rem;
 }
 
 .skill-tag {
-  background-color: var(--border-color);
-  color: #e2e8f0;
-  padding: 0.25rem 0.6rem;
-  border-radius: 4px;
-  font-size: 0.8rem;
+  background-color: var(--border-color) !important;
+  color: #e2e8f0 !important;
+  padding: 0.3rem 0.65rem !important;
+  border-radius: 4px !important;
+  font-size: 0.8rem !important;
+  display: inline-block !important;
+  white-space: nowrap;
 }
 
-.section-heading {
-  font-size: 1.5rem;
-  color: var(--text-primary);
-  margin-bottom: 2rem;
-  border-bottom: 1px solid var(--border-color);
-  padding-bottom: 0.5rem;
-}
-
-.timeline-list {
+/* Media Rows Layout Elements */
+.youtube-placeholder-grid {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
 
-.timeline-item {
+.video-thumb-mock {
+  flex: 1;
+  background-color: var(--border-color);
+  height: 140px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  border: 1px dashed #334155;
+}
+
+/* Soft-Sell Framework Structure */
+.collaboration-menu {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 
 @media (max-width: 600px) {
-  .timeline-item {
+  .collaboration-menu {
     grid-template-columns: 1fr;
-    gap: 0.5rem;
+  }
+  .youtube-placeholder-grid {
+    flex-direction: column;
   }
 }
 
-.timeline-meta {
-  display: flex;
-  flex-direction: column;
+.collab-option {
+  background-color: rgba(30, 41, 59, 0.3);
+  border: 1px solid var(--border-color);
+  padding: 1.25rem;
+  border-radius: 6px;
 }
 
-.timeline-period {
-  font-weight: bold;
-  color: var(--accent-cyan);
-  font-size: 0.95rem;
-}
-
-.timeline-company {
-  color: var(--text-muted);
-  font-size: 0.85rem;
-}
-
-.timeline-role {
+.collab-option h5 {
   margin: 0 0 0.5rem 0;
   color: var(--text-primary);
-  font-size: 1.05rem;
+  font-size: 1rem;
 }
 
-.timeline-desc {
+.collab-option p {
   margin: 0;
-  color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.final-cta {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.primary-cta-button {
+  display: inline-block;
+  background-color: var(--accent-cyan);
+  color: #0b0f19;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  transition:
+    opacity 0.2s,
+    transform 0.2s;
 }
 
 .portfolio-footer {
@@ -217,7 +262,7 @@ body {
   margin-top: 6rem;
 }
 
-/* Placeholder Landing Page Layout Styles */
+/* Under Construction Layout Styles */
 .coming-soon-container {
   display: flex;
   flex-direction: column;
@@ -227,6 +272,7 @@ body {
   max-width: 600px;
   margin: 0 auto;
   padding: 2rem;
+  text-align: left;
 }
 
 .divider {
