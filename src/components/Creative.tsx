@@ -59,7 +59,7 @@ export default function Creative(): React.JSX.Element {
                 <div className="video-responsive-wrapper">
                   <iframe
                     /* ⚡ FIXED: Added the template literal syntax ($) and the secure embed route */
-                    src={`https://youtube.com/{video.id}?rel=0`}
+                    src={`https://youtube.com/embed/${video.id}?rel=0`}
                     title={video.title}
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
