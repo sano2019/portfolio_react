@@ -6,7 +6,7 @@ import Contact from "./components/Contact";
 import "./App.css";
 
 // 🛠️ SET THIS TO 'true' WHEN YOU ARE READY TO DEPLOY THE FULL BALANCED DESIGN
-const IS_WEBSITE_LIVE = false;
+const IS_WEBSITE_LIVE = true;
 
 export default function App(): React.JSX.Element {
   // Intercept and render the clean placeholder for production lockdown

@@ -288,3 +288,53 @@ body {
   color: var(--text-secondary);
   margin-bottom: 2rem;
 }
+
+/* Responsive Video Embed Window Layouts */
+.embed-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 680px) {
+  .embed-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.embed-card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Forces standard 16:9 cinematic aspect-ratio container scale */
+.video-responsive-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 ratio scale */
+  height: 0;
+  overflow: hidden;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  background-color: #000;
+}
+
+.video-responsive-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.embed-video-title {
+  font-size: 0.88rem;
+  line-height: 1.4;
+  color: var(--text-secondary);
+  margin-top: 0.75rem;
+  font-weight: 500;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Truncates clean layout line lengths if title is massive */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
