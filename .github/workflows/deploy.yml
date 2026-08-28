@@ -39,7 +39,7 @@ jobs:
       # ⚡ CRITICAL REPO TASK: Bakes your public data model right into the public folder
       # We run this BEFORE 'npm run build' so Vite packs the JSON layout into the /dist asset target
       - name: Fetch and Bake YouTube Data Feed
-        run: node fetch-youtube.mjs
+        run: node fetch-youtube.js
 
       - name: Compile and Bundle Site Build
         run: npm run build
