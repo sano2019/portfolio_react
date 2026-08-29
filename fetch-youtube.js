@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { XMLParser } from "fast-xml-parser";
 
 const FEED_URL =
   "https://www.youtube.com/feeds/videos.xml?channel_id=UCcAmd8YHfnF9sHcW70aP6ig";
@@ -13,25 +14,21 @@ async function fetchYouTubeFeed() {
     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
 
     const xmlText = await response.text();
+    const parser = new XMLParser({ ignoreAttributes: false });
+    const result = parser.parse(xmlText);
 
-    // Extract individual video entries
-    const entryMatches = xmlText.match(/<entry>([\s\S]*?)<\/entry>/g) || [];
-
-    const videos = entryMatches
+    const entries = result.feed?.entry || [];
+    const videos = entries
       .map((entry) => {
-        const titleMatch = entry.match(/<title>([\s\S]*?)<\/title>/);
-        const linkMatch = entry.match(/<link[^>]*href=["']([^"']*)["']/);
-        const idMatch = entry.match(/<yt:videoId>([\s\S]*?)<\/yt:videoId>/);
-        const updatedMatch = entry.match(/<updated>([\s\S]*?)<\/updated>/);
-
+        const media = entry["media:group"] || {};
         return {
-          id: idMatch ? idMatch[1] : "",
-          title: titleMatch ? titleMatch[1] : "",
-          link: linkMatch ? linkMatch[1] : "",
-          date: updatedMatch ? updatedMatch[1] : "",
+          id: entry["yt:videoId"] || "",
+          title: entry.title || "",
+          link: entry.link?.["@_href"] || entry.link || "",
+          date: entry.updated || entry.published || "",
         };
       })
-      .filter((video) => video.id);
+      .filter((v) => v.id);
 
     // ⚡ OPTIMIZATION: Slice the array down to exactly the 2 most recent uploads
     const limitedVideos = videos.slice(0, 2);

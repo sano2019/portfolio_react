@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "../App.css"; // Ensure this matches your CSS import path
 
 interface YouTubeVideo {
   id: string;
@@ -8,9 +7,21 @@ interface YouTubeVideo {
   date: string;
 }
 
+function isYouTubeVideo(item: unknown): item is YouTubeVideo {
+  return (
+    typeof item === "object" &&
+    item !== null &&
+    typeof (item as YouTubeVideo).id === "string" &&
+    typeof (item as YouTubeVideo).title === "string" &&
+    typeof (item as YouTubeVideo).link === "string" &&
+    typeof (item as YouTubeVideo).date === "string"
+  );
+}
+
 export default function Creative(): React.JSX.Element {
   const [videos, setVideos] = useState<YouTubeVideo[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<boolean>(false);
 
   useEffect(() => {
     // Fetch the statically built JSON asset from your public folder
@@ -19,13 +30,17 @@ export default function Creative(): React.JSX.Element {
         if (!res.ok) throw new Error("Static video asset not found");
         return res.json();
       })
-      .then((data: YouTubeVideo[]) => {
-        setVideos(data);
+      .then((rawData: unknown) => {
+        if (!Array.isArray(rawData) || !rawData.every(isYouTubeVideo)) {
+          throw new Error("Invalid YouTube video data format");
+        }
+        setVideos(rawData);
         setLoading(false);
       })
       .catch((err) => {
         console.error("Failed to load static YouTube feed:", err);
         setLoading(false);
+        setError(true);
       });
   }, []);
 
@@ -51,6 +66,13 @@ export default function Creative(): React.JSX.Element {
         {loading ? (
           <p style={{ color: "var(--text-muted)", fontSize: "0.9rem" }}>
             Loading project media...
+          </p>
+        ) : error ? (
+          <p>
+            Media feed unavailable.{" "}
+            <a href="https://youtube.com" target="_blank" rel="noreferrer">
+              View on YouTube
+            </a>
           </p>
         ) : (
           <div className="embed-grid">

@@ -42,8 +42,8 @@ export default function CaseStudies(): React.JSX.Element {
         the production systems I've architected.
       </p>
       <div className="case-studies-grid">
-        {STORIES.map((story, i) => (
-          <div key={i} className="pillar-card case-card">
+        {STORIES.map((story) => (
+          <div key={story.title} className="pillar-card case-card">
             <div className="card-meta">
               <span className="card-company">{story.company}</span>
               <span className="card-scope">{story.scope}</span>

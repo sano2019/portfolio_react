@@ -8,6 +8,12 @@
   --border-color: #1e293b;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   background-color: var(--bg-color);
   margin: 0;
@@ -34,7 +40,7 @@ body {
 
 .portfolio-header {
   margin-bottom: 4rem;
-  text-align: left;
+  text-align: center;
 }
 
 .portfolio-badge {
@@ -74,6 +80,7 @@ body {
   line-height: 1.6;
   color: #cbd5e1;
   margin-bottom: 1.5rem;
+  text-align: left;
 }
 
 /* Fixes the text overlap on your contact row */
@@ -337,4 +344,41 @@ body {
   -webkit-line-clamp: 2; /* Truncates clean layout line lengths if title is massive */
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+.site-nav {
+  position: sticky;
+  top: 1rem; /* Stays visible near viewport top while scrolling */
+  display: flex;
+  justify-content: space-between; /* Spreads links evenly */
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  padding: 0.75rem 1rem;
+  background-color: rgba(17, 24, 39, 0.85);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  backdrop-filter: blur(6px);
+  z-index: 10;
+}
+
+.site-nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  transition: color 0.15s ease;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  color: var(--accent-cyan);
+}
+
+.hero-availability {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1.5rem;
 }

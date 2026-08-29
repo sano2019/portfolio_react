@@ -28,14 +28,25 @@ export default function App(): React.JSX.Element {
   // Your full layout orchestrator is safely waiting down here, compile-checked!
   return (
     <div className="portfolio-container">
-      <Hero />
-      <CaseStudies />
-      <Creative />
-      <Contact />
-      <footer className="portfolio-footer">
-        © {new Date().getFullYear()} Sander Nobel. Crafted with React,
-        TypeScript, and Vite.
-      </footer>
+      <nav className="site-nav">
+        <a href="#hero">About</a>
+        <a href="#case-studies">Systems</a>
+        <a href="#creative">Creative</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div id="hero">
+        <Hero />
+      </div>
+      <div id="case-studies">
+        <CaseStudies />
+      </div>
+      <div id="creative">
+        <Creative />
+      </div>
+      <div id="contact">
+        <Contact />
+      </div>
+      ...
     </div>
   );
 }
