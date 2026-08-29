@@ -6,7 +6,7 @@ import Contact from "./components/Contact";
 import "./App.css";
 
 // 🛠️ SET THIS TO 'true' WHEN YOU ARE READY TO DEPLOY THE FULL BALANCED DESIGN
-const IS_WEBSITE_LIVE = true;
+const IS_WEBSITE_LIVE = false;
 
 export default function App(): React.JSX.Element {
   // Intercept and render the clean placeholder for production lockdown
@@ -46,7 +46,10 @@ export default function App(): React.JSX.Element {
       <div id="contact">
         <Contact />
       </div>
-      ...
+      <footer className="portfolio-footer">
+        © {new Date().getFullYear()} Sander Nobel. Crafted with React,
+        TypeScript, and Vite.
+      </footer>
     </div>
   );
 }
