@@ -1,0 +1,1 @@
+This website will be a site that represents me, and my skillsets. I would like it to be able to also function as a sort of portfolio that I could use to introduce potential clients to my offering to work freelance. I have trouble putting my skillsets to words so I will probably also need to spar on this with my AI companion.

@@ -187,26 +187,6 @@ body {
   white-space: nowrap;
 }
 
-/* Media Rows Layout Elements */
-.youtube-placeholder-grid {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-.video-thumb-mock {
-  flex: 1;
-  background-color: var(--border-color);
-  height: 140px;
-  border-radius: 6px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  border: 1px dashed #334155;
-}
-
 /* Soft-Sell Framework Structure */
 .collaboration-menu {
   display: grid;
