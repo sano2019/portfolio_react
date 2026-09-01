@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import CaseStudies from "./components/CaseStudies";
 import Creative from "./components/Creative";
 import Contact from "./components/Contact";
+import Testimonials from "./components/Testimonials";
 import "./App.css";
 
 // 🛠️ SET THIS TO 'true' WHEN YOU ARE READY TO DEPLOY THE FULL BALANCED DESIGN
@@ -33,6 +34,7 @@ export default function App(): React.JSX.Element {
         <a href="#case-studies">Systems</a>
         <a href="#creative">Creative</a>
         <a href="#contact">Contact</a>
+        <a href="#testimonials">Testimonials</a>
       </nav>
       <div id="hero">
         <Hero />
@@ -42,6 +44,9 @@ export default function App(): React.JSX.Element {
       </div>
       <div id="creative">
         <Creative />
+      </div>
+      <div id="testimonials">
+        <Testimonials />
       </div>
       <div id="contact">
         <Contact />
