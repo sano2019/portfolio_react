@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Internal reference docs
+skills-inventory.md
+testimonials-draft.md
+references/

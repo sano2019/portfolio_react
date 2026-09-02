@@ -1,57 +1,25 @@
 import React from "react";
-
-interface ProjectStory {
-  title: string;
-  scope: string;
-  company: string;
-  tags: string[];
-  description: string;
-}
-
-const STORIES: ProjectStory[] = [
-  {
-    title: "High-Reliability Aviation Web Infrastructure",
-    scope: "Full-Stack Software Engineering",
-    company: "SAS - Scandinavian Airlines",
-    tags: ["TypeScript", "React", "Node.js", "Docker", "Cloud Platform"],
-    description:
-      "Modernized under-the-hood web infrastructure within a complex, high-scale aviation environment. Focused heavily on type safety, system resilience, and tracking down runtime inefficiencies.",
-  },
-  {
-    title: "Algorithmic Modeling & Enterprise Logic Architecture",
-    scope: "Domain Analysis & SaaS Configuration",
-    company: "Keylane",
-    tags: [
-      "Systems Analysis",
-      "Mathematical Formulas",
-      "Logic Design",
-      "On-site Workshops",
-    ],
-    description:
-      "Translated intricate corporate demands into rock-solid automated solutions. Mapped end-to-end calculations and audited deep architectural dependencies to eliminate downstream regression errors.",
-  },
-];
+import { STORIES } from "../data/case-studies";
 
 export default function CaseStudies(): React.JSX.Element {
   return (
     <section className="portfolio-section">
-      <h3 className="section-heading">Systems & Code Retrospectives</h3>
+      <h3 className="section-heading">Systems & Case Studies</h3>
       <p className="section-intro-text">
-        Most of my commercial work lives inside private enterprise repositories.
-        Instead of public code dumps, here is the high-level methodology behind
-        the production systems I've architected.
+        Select verified projects from named roles; NDA-sensitive work kept
+        anonymous (e.g., car manufacturer POC, national infrastructure).
       </p>
       <div className="case-studies-grid">
-        {STORIES.map((story) => (
-          <div key={story.title} className="pillar-card case-card">
+        {STORIES.map((s) => (
+          <div key={s.title} className="pillar-card case-card">
             <div className="card-meta">
-              <span className="card-company">{story.company}</span>
-              <span className="card-scope">{story.scope}</span>
+              <span className="card-company">{s.company}</span>
+              <span className="card-scope">{s.scope}</span>
             </div>
-            <h4 className="case-title">{story.title}</h4>
-            <p className="card-text">{story.description}</p>
+            <h4 className="case-title">{s.title}</h4>
+            <p className="card-text">{s.description}</p>
             <div className="tag-grid">
-              {story.tags.map((t) => (
+              {s.tags.map((t) => (
                 <span key={t} className="skill-tag">
                   {t}
                 </span>

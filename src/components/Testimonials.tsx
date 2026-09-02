@@ -7,24 +7,19 @@ interface Quote {
 
 const QUOTES: Quote[] = [
   {
-    source: "Colleague, Futurice",
+    source: "Software Engineer, Futurice",
     pull:
-      "He never shies away from responsibility... passionate about helping junior developers get their first job. I'd happily recommend him.",
+      "As one of my mentors during the traineeship, he guided not just me but all the interns. His curiosity and down-to-earth approach made him indispensable.",
   },
   {
-    source: "Mentee",
+    source: "UX/UI Designer, Futurice",
     pull:
-      "Hard to overstate the value... his professional maturity helped me figure out what I wanted to do and the first steps to get there.",
+      "On a demanding year-long project, he was a steadfast pillar of support — exceptional problem-solving and a collaborative spirit.",
   },
   {
-    source: "Project partner",
+    source: "Senior Developer, Futurice",
     pull:
-      "Unwavering professionalism... a steadfast pillar of support. Collaborative spirit made it an absolute pleasure.",
-  },
-  {
-    source: "Peer / referral",
-    pull:
-      "Always there for support, technical or friendly. Positive impact undeniable.",
+      "Happy to jump into new stacks and learn quickly to help the team and client. A team player who takes responsibility when there's no account manager.",
   },
 ];
 
@@ -45,12 +40,18 @@ export default function Testimonials(): React.JSX.Element {
                 style={{
                   fontWeight: 600,
                   color: "var(--text-primary)",
-                  marginBottom: "0.75rem",
+                  marginBottom: "0.5rem",
                 }}
               >
                 “{q.pull}”
               </p>
-              <cite style={{ fontSize: "0.8rem", color: "var(--text-muted)" }}>
+              <cite
+                style={{
+                  fontSize: "0.8rem",
+                  color: "var(--text-muted)",
+                  fontStyle: "normal",
+                }}
+              >
                 — {q.source}
               </cite>
             </blockquote>
