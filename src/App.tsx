@@ -33,6 +33,7 @@ export default function App(): React.JSX.Element {
         <a href="#offerings">Offerings</a>
         <a href="#creative">Creative Projects</a>
         <a href="#contact">Contact</a>
+        {/* HAMBURGER START — comment out below block to disable hamburger overlay */}
         <button
           className="hamburger-btn"
           aria-label="Open menu"
@@ -41,7 +42,9 @@ export default function App(): React.JSX.Element {
         >
           <span></span><span></span><span></span>
         </button>
+        {/* HAMBURGER END */}
       </nav>
+      {/* OVERLAY START — comment out for hamburger removal */}
       <div
         className={`mobile-nav-overlay ${open ? "open" : ""}`}
         role="dialog"
@@ -57,6 +60,7 @@ export default function App(): React.JSX.Element {
         <a href="#creative" onClick={() => setOpen(false)}>Creative Projects</a>
         <a href="#contact" onClick={() => setOpen(false)}>Contact</a>
       </div>
+      {/* OVERLAY END */}
       <main id="hero"><Hero /></main>
       <section id="case-studies" aria-label="Case studies"><CaseStudies /></section>
       <section id="testimonials" aria-label="Testimonials"><Testimonials /></section>

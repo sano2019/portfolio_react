@@ -54,6 +54,7 @@ h3.section-heading {
 
 .portfolio-badge {
   display: inline-block;
+  margin: 0 auto 1.25rem auto;
   background-color: var(--border-color);
   color: var(--accent-cyan);
   padding: 0.25rem 0.6rem;
@@ -500,6 +501,15 @@ main[id] {
     text-align: center;
   }
 
+  body {
+    margin-top: -1.5rem;
+  }
+  .site-nav {
+    margin-bottom: 0;
+  }
+  .portfolio-header {
+    padding-top: 3rem;
+  }
   .portfolio-container {
     padding: 2rem 1rem;
     text-align: center;
@@ -522,6 +532,9 @@ main[id] {
     border: none;
     cursor: pointer;
     padding: 0.25rem;
+  }
+  .portfolio-title {
+    font-size: 2rem;
   }
   .hamburger-btn span {
     display: block;
@@ -607,6 +620,12 @@ main:focus {
 .contrast-toggle:hover {
   background: #fff;
   color: #000;
+}
+.high-contrast .hamburger-btn span {
+  background-color: #fff !important;
+}
+.high-contrast .close-btn {
+  color: #fff !important;
 }
 .high-contrast .contrast-toggle:hover {
   background: #00fff2;
