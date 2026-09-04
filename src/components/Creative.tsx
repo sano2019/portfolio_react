@@ -46,7 +46,7 @@ export default function Creative(): React.JSX.Element {
 
   return (
     <section className="portfolio-section">
-      <h3 className="section-heading">Beyond the Code</h3>
+      <h3 className="section-heading">Creative Projects</h3>
       <p className="section-intro-text">
         I believe that the best engineers are also exceptional communicators.
         When I'm not looking at a terminal, I'm scaling up creative media

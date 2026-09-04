@@ -29,10 +29,9 @@ export default function App(): React.JSX.Element {
       <a href="#hero" className="skip-link">Skip to content</a>
       <nav className="site-nav">
         <a href="#hero">About</a>
-        <a href="#case-studies">Systems</a>
-        <a href="#testimonials">Testimonials</a>
+        <a href="#case-studies">Work</a>
         <a href="#offerings">Offerings</a>
-        <a href="#creative">Creative</a>
+        <a href="#creative">Creative Projects</a>
         <a href="#contact">Contact</a>
         <button
           className="hamburger-btn"
@@ -53,10 +52,9 @@ export default function App(): React.JSX.Element {
           ×
         </button>
         <a href="#hero" onClick={() => setOpen(false)}>About</a>
-        <a href="#case-studies" onClick={() => setOpen(false)}>Systems</a>
-        <a href="#testimonials" onClick={() => setOpen(false)}>Testimonials</a>
+        <a href="#case-studies" onClick={() => setOpen(false)}>Work</a>
         <a href="#offerings" onClick={() => setOpen(false)}>Offerings</a>
-        <a href="#creative" onClick={() => setOpen(false)}>Creative</a>
+        <a href="#creative" onClick={() => setOpen(false)}>Creative Projects</a>
         <a href="#contact" onClick={() => setOpen(false)}>Contact</a>
       </div>
       <main id="hero"><Hero /></main>

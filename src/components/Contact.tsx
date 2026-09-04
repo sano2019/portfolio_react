@@ -3,7 +3,7 @@ import React from "react";
 export default function Contact(): React.JSX.Element {
   return (
     <section className="portfolio-section contact-collaboration">
-      <h3 className="section-heading">Let's Collaborate</h3>
+      <h3 className="section-heading">Contact</h3>
       <p className="section-intro-text">
         Whether you want to trade travel stories, talk infrastructure, or bring
         me onto an active corporate project, my doors are open.

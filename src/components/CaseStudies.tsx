@@ -4,7 +4,7 @@ import { STORIES } from "../data/case-studies";
 export default function CaseStudies(): React.JSX.Element {
   return (
     <section className="portfolio-section">
-      <h3 className="section-heading">Systems & Case Studies</h3>
+      <h3 className="section-heading">Work</h3>
       <p className="section-intro-text">
         Select verified projects from named roles; NDA-sensitive work kept
         anonymous (e.g., car manufacturer POC, national infrastructure).

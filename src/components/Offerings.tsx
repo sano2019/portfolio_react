@@ -33,7 +33,7 @@ const OFFERS: Offer[] = [
 export default function Offerings(): React.JSX.Element {
   return (
     <section className="portfolio-section">
-      <h3 className="section-heading">What I Offer</h3>
+      <h3 className="section-heading">Offerings</h3>
       <p className="section-intro-text">
         A hybrid profile — engineering, domain consulting, and structured
         mentoring. Confidential work (NDA clients, internal repositories)
