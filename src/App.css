@@ -195,6 +195,16 @@ body {
   margin-bottom: 2.5rem;
 }
 
+.mobile-nav-overlay {
+  position: fixed; inset: 0; background: rgba(11,15,25,0.92); backdrop-filter: blur(8px); display: none;
+  flex-direction: column; align-items: center; justify-content: center; gap: 2rem; z-index: 100; opacity: 0;
+  pointer-events: none; transition: opacity 0.3s ease;
+}
+.mobile-nav-overlay.open { display: flex; opacity: 1; pointer-events: auto; }
+.mobile-nav-overlay a { color: var(--text-primary); text-decoration: none; font-size: 1.4rem; font-weight: 600; letter-spacing: 0.05em; }
+.mobile-nav-overlay a:hover { color: var(--accent-cyan); }
+.mobile-nav-overlay button.close-btn { position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; color: var(--accent-cyan); font-size: 2rem; cursor: pointer; }
+
 @media (max-width: 600px) {
   .collaboration-menu {
     grid-template-columns: 1fr;
@@ -243,7 +253,11 @@ body {
 }
 
 .portfolio-footer {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
   color: #475569;
   font-size: 0.8rem;
   margin-top: 6rem;
@@ -361,4 +375,78 @@ body {
   font-size: 0.9rem;
   margin-top: -0.5rem;
   margin-bottom: 1.5rem;
+}
+
+
+/* Mobile hamburger menu (minimalist futuristic) */
+.hamburger-btn {
+  display: none;
+}
+
+.mobile-nav-overlay {
+  position: fixed; inset: 0; background: rgba(11,15,25,0.92); backdrop-filter: blur(8px); display: none;
+  flex-direction: column; align-items: center; justify-content: center; gap: 2rem; z-index: 100; opacity: 0;
+  pointer-events: none; transition: opacity 0.3s ease;
+}
+.mobile-nav-overlay.open { display: flex; opacity: 1; pointer-events: auto; }
+.mobile-nav-overlay a { color: var(--text-primary); text-decoration: none; font-size: 1.4rem; font-weight: 600; letter-spacing: 0.05em; }
+.mobile-nav-overlay a:hover { color: var(--accent-cyan); }
+.mobile-nav-overlay button.close-btn { position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; color: var(--accent-cyan); font-size: 2rem; cursor: pointer; }
+
+@media (max-width: 600px) {
+  .portfolio-container {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  .site-nav {
+    justify-content: flex-end;
+    width: auto;
+    padding: 0.5rem 1rem;
+    float: right;
+    border-radius: 30px;
+  }
+  .site-nav a {
+    display: none;
+  }
+  .hamburger-btn {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+  }
+  .hamburger-btn span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--accent-cyan);
+    border-radius: 1px;
+    transition: all 0.25s ease;
+  }
+}
+
+/* WCAG 2.2 AA improvements */
+.skip-link {
+  position: absolute; top: -40px; left: 0; background: var(--accent-cyan); color: #0b0f19; padding: 0.5rem 1rem; z-index: 200; text-decoration: none; font-weight: 700; border-radius: 0 0 4px 4px; transition: top 0.2s;
+}
+.skip-link:focus { top: 0; }
+*:focus-visible { outline: 2px solid var(--accent-cyan); outline-offset: 3px; }
+main:focus { outline: none; }
+
+.high-contrast, .high-contrast .portfolio-container, .high-contrast .pillar-card, .high-contrast .collab-option {
+  background-color: #000 !important; color: #fff !important;
+  border-color: #fff !important;
+}
+.high-contrast .portfolio-badge, .high-contrast .skill-tag, .high-contrast .primary-cta-button {
+  background-color: #fff !important; color: #000 !important;
+}
+.high-contrast a { color: #00fff2 !important; text-decoration: underline; }
+.contrast-toggle { background: none; border: 1px solid var(--accent-cyan); color: var(--accent-cyan); padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.75rem; cursor: pointer; }
+.contrast-toggle:hover { background: var(--accent-cyan); color: #0b0f19; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .mobile-nav-overlay { transition: none; }
 }
