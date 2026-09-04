@@ -42,8 +42,8 @@ async function fetchYouTubeFeed() {
       `Successfully saved ${limitedVideos.length} videos to ${OUTPUT_FILE}`,
     );
   } catch (error) {
-    console.error("Error fetching YouTube feed:", error);
-    process.exit(1);
+    console.warn("Skipping YouTube feed update (feed down):", error);
+    // Continue without updating youtube-videos.json — site uses static fallback
   }
 }
 
