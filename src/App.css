@@ -88,19 +88,23 @@ h2, h3.section-heading { text-align: center; }
 /* Fixes the text overlap on your contact row */
 .contact-row {
   display: flex !important;
+  justify-content: center !important;
   flex-direction: row !important;
   gap: 1.5rem !important;
   margin-top: 1.5rem;
-  justify-content: flex-start;
 }
 
 .contact-link {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  border: 1px solid var(--accent-cyan);
+  border-radius: 30px;
   color: var(--accent-cyan);
   text-decoration: none;
-  font-weight: 500;
-  font-size: 0.95rem;
-  display: inline-block;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
 }
+.contact-link:hover { background: var(--accent-cyan); color: #0b0f19; }
 
 .portfolio-section {
   margin-bottom: 4rem;
@@ -243,16 +247,16 @@ h2, h3.section-heading { text-align: center; }
 
 .primary-cta-button {
   display: inline-block;
-  background-color: var(--accent-cyan);
-  color: #0b0f19;
+  background-color: transparent;
+  color: var(--accent-cyan);
+  border: 1px solid var(--accent-cyan);
   text-decoration: none;
   font-weight: 700;
-  padding: 0.8rem 2rem;
-  border-radius: 4px;
-  transition:
-    opacity 0.2s,
-    transform 0.2s;
+  padding: 0.5rem 1.25rem;
+  border-radius: 30px;
+  transition: background 0.2s, color 0.2s;
 }
+.primary-cta-button:hover { background: var(--accent-cyan); color: #0b0f19; }
 
 .portfolio-footer {
   display: flex;
@@ -443,12 +447,15 @@ main:focus { outline: none; }
   background-color: #000 !important; color: #fff !important;
   border-color: #fff !important;
 }
-.high-contrast .portfolio-badge, .high-contrast .skill-tag, .high-contrast .primary-cta-button {
-  background-color: #fff !important; color: #000 !important;
+.high-contrast .portfolio-badge, .high-contrast .skill-tag, .high-contrast .primary-cta-button, .high-contrast .contact-link {
+  background-color: #fff !important; color: #000 !important; border-color: #fff !important;
 }
-.high-contrast a { color: #00fff2 !important; text-decoration: underline; }
-.contrast-toggle { background: none; border: 1px solid var(--accent-cyan); color: var(--accent-cyan); padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.75rem; cursor: pointer; }
-.contrast-toggle:hover { background: var(--accent-cyan); color: #0b0f19; }
+.high-contrast a { color: #fff !important; text-decoration: underline; }
+
+.contrast-toggle { background: #fff; color: #000; border: 2px solid #fff; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700; cursor: pointer; text-decoration: underline; min-width: 150px; height: 30px; line-height: 1; box-sizing: border-box; }
+.high-contrast .contrast-toggle { background: transparent; color: #00fff2; border: 1px solid #00fff2; text-decoration: none; min-width: 150px; height: 30px; line-height: 1; box-sizing: border-box; }
+.contrast-toggle:hover { background: #fff; color: #000; }
+.high-contrast .contrast-toggle:hover { background: #00fff2; color: #0b0f19; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
