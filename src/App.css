@@ -22,6 +22,8 @@ body {
   text-align: left; /* Explicitly reset global center-aligns */
 }
 
+h2, h3.section-heading { text-align: center; }
+
 .portfolio-container {
   color: #e2e8f0;
   font-family:
@@ -394,7 +396,9 @@ body {
 .mobile-nav-overlay button.close-btn { position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; color: var(--accent-cyan); font-size: 2rem; cursor: pointer; }
 
 @media (max-width: 600px) {
-  .portfolio-container {
+  h2, h3.section-heading { text-align: center; }
+
+.portfolio-container {
     padding: 2rem 1rem;
     text-align: center;
   }
