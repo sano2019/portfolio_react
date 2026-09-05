@@ -6,7 +6,7 @@ export default function Hero(): React.JSX.Element {
       <div className="portfolio-badge">SANDERNOBEL.DEV</div>
       <h1 className="portfolio-title">Sander Nobel</h1>
       <h2 className="portfolio-subtitle">
-        Full-Stack Consultant — Business Needs to Implementation
+        Full-Stack Consultant - Business Needs to Implementation
       </h2>
       <p className="portfolio-location">
         📍 Stockholm, Sweden | Bilingual English & Dutch
@@ -29,7 +29,7 @@ export default function Hero(): React.JSX.Element {
           Email Me
         </a>
         <a
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/in/sano2019/"
           target="_blank"
           rel="noreferrer"
           className="contact-link"

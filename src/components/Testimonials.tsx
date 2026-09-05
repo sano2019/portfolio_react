@@ -14,7 +14,7 @@ const QUOTES: Quote[] = [
   {
     source: "UX/UI Designer, Futurice",
     pull:
-      "On a demanding year-long project, he was a steadfast pillar of support — exceptional problem-solving and a collaborative spirit.",
+      "On a demanding year-long project, he was a steadfast pillar of support - exceptional problem-solving and a collaborative spirit.",
   },
   {
     source: "Senior Developer, Futurice",
@@ -28,7 +28,7 @@ export default function Testimonials(): React.JSX.Element {
     <section className="portfolio-section">
       <h3 className="section-heading">Words from Collaborators</h3>
       <p className="section-intro-text">
-        Colleagues highlight my ability to teach, adapt, and stay reliable —
+        Colleagues highlight my ability to teach, adapt, and stay reliable -
         feedback that aligns with my CELTA certification (July 2026) for
         structured adult education.
       </p>
@@ -52,7 +52,7 @@ export default function Testimonials(): React.JSX.Element {
                   fontStyle: "normal",
                 }}
               >
-                — {q.source}
+                - {q.source}
               </cite>
             </blockquote>
           </div>

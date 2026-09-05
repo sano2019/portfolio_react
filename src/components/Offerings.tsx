@@ -10,16 +10,34 @@ const OFFERS: Offer[] = [
   {
     title: "Engineering & Integration",
     scope: "Full-Stack & Mobile Development",
-    tags: ["TypeScript", "React", "Node", "Flutter", "Kubernetes"],
+    tags: [
+      "TypeScript",
+      "React",
+      "React Native",
+      "Node",
+      "Flutter",
+      "Kubernetes",
+      "a11y",
+      "Deployment Pipelines",
+      "Azure Devops",
+      "Docker",
+      "Fastify",
+    ],
     description:
-      "Building and integrating systems — from loyalty integrations (SAS) to mobile digitization (Stora Enso) and on-prem cloud automation (Internetstiftelsen). NDA-sensitive work handled confidentially.",
+      "Building and integrating systems - from loyalty integrations (SAS) to mobile digitization (Stora Enso) and on-prem cloud automation (Internetstiftelsen). NDA-sensitive work handled confidentially.",
   },
   {
     title: "Consulting & Domain Analysis",
     scope: "SaaS Configuration & Technical Translation",
-    tags: ["Business Logic", "Documentation", "Client Workshops", "GDPR"],
+    tags: [
+      "Business Logic",
+      "Documentation",
+      "Client Workshops",
+      "GDPR",
+      "Accessibility",
+    ],
     description:
-      "Translating requirements into working configuration and documentation (Keylane Axon), auditing dependencies, and supporting stakeholder dynamics — including conflict resolution in multi-team delivery.",
+      "Translating requirements into working configuration and documentation (Keylane Axon), auditing dependencies, and supporting stakeholder dynamics - including conflict resolution in multi-team delivery.",
   },
   {
     title: "Mentorship & Structured Training",
@@ -35,9 +53,9 @@ export default function Offerings(): React.JSX.Element {
     <section className="portfolio-section">
       <h3 className="section-heading">Offerings</h3>
       <p className="section-intro-text">
-        A hybrid profile — engineering, domain consulting, and structured
-        mentoring. Confidential work (NDA clients, internal repositories)
-        stays anonymous; named partnerships reference public-facing roles.
+        A hybrid profile - engineering, domain consulting, and structured
+        mentoring. Confidential work (NDA clients, internal repositories) stays
+        anonymous; named partnerships reference public-facing roles.
       </p>
       <div className="case-studies-grid">
         {OFFERS.map((o) => (
@@ -55,7 +73,13 @@ export default function Offerings(): React.JSX.Element {
               ))}
             </div>
             {o.note && (
-              <p style={{ fontSize: "0.8rem", color: "var(--text-muted)", marginTop: "0.5rem" }}>
+              <p
+                style={{
+                  fontSize: "0.8rem",
+                  color: "var(--text-muted)",
+                  marginTop: "0.5rem",
+                }}
+              >
                 {o.note}
               </p>
             )}
